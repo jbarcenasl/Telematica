@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package version="3.0" xml:lang="en" unique-identifier="pub-id" prefix="cc: http://creativecommons.org/ns# rendition: http://www.idpf.org/vocab/rendition/#" xmlns="http://www.idpf.org/2007/opf">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+        <dc:title id="title">Trabajo colaborativo en Entornos virtuales</dc:title>
+
+        <dc:identifier id="pub-id">urn:uuid:bcd28d1c-9225-2aa5-bdd7-b4c87cd2220b</dc:identifier>
+        <dc:identifier id="isbn-id">urn:isbn:978-607-95656-5-7</dc:identifier><meta refines="#isbn-id" property="identifier-type" scheme="onix:codelist5">15</meta><meta name="cover" content="img2" />
+
+        <dc:creator>Enrique Ruíz-Velasco S.&amp; Josefina Bárcenas López</dc:creator>
+        <dc:publisher>SOMECE, A.C.</dc:publisher>
+        <dc:rights>SOMECE, A.C.</dc:rights>
+        <dc:language>es</dc:language>
+        <dc:description>&lt;p&gt;Trabajo colaboratvo en entornos virtuales, es una colecci&amp;oacute;n de trabajos realizados en y desde la distancia, que privilegia la investigaci&amp;oacute;n educativa y el trabajo colaborativo acad&amp;eacute;mico.&lt;/p&gt;
+</dc:description>
+        <meta property="dcterms:modified">2019-12-10T08:38:19Z</meta>
+        <meta property="rendition:layout">reflowable</meta>
+
+    </metadata>
+    <manifest>
+        <item id="html0" href="xhtml/pdf2erwa/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html1" href="xhtml/pdfyyxgc/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html2" href="xhtml/pdfgajce/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html3" href="xhtml/pdfdkjm6/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html4" href="xhtml/pdf9r768/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html5" href="xhtml/pdfoxef9/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html6" href="xhtml/pdfoxef9/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html7" href="xhtml/pdfoxef9/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html8" href="xhtml/pdfrv4cd/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html9" href="xhtml/pdfrv4cd/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html10" href="xhtml/pdfrv4cd/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html11" href="xhtml/pdfrv4cd/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html12" href="xhtml/pdfrv4cd/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html13" href="xhtml/pdfrv4cd/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html14" href="xhtml/pdfrv4cd/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html15" href="xhtml/pdfrv4cd/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html16" href="xhtml/pdfrv4cd/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html17" href="xhtml/pdfrv4cd/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html18" href="xhtml/pdfrv4cd/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html19" href="xhtml/pdfrv4cd/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html20" href="xhtml/pdfvr21f/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html21" href="xhtml/pdfkxr7f/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html22" href="xhtml/pdfkxr7f/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html23" href="xhtml/pdfkxr7f/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html24" href="xhtml/pdfkxr7f/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html25" href="xhtml/pdfkxr7f/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html26" href="xhtml/pdfkxr7f/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html27" href="xhtml/pdfkxr7f/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html28" href="xhtml/pdfkxr7f/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html29" href="xhtml/pdfkxr7f/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html30" href="xhtml/pdfkxr7f/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html31" href="xhtml/pdfkxr7f/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html32" href="xhtml/pdfkxr7f/pages/page13.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html33" href="xhtml/pdfkxr7f/pages/page14.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html34" href="xhtml/pdfud6fq/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html35" href="xhtml/pdfx7cmq/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html36" href="xhtml/pdfx7cmq/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html37" href="xhtml/pdfx7cmq/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html38" href="xhtml/pdfx7cmq/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html39" href="xhtml/pdfx7cmq/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html40" href="xhtml/pdfx7cmq/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html41" href="xhtml/pdfx7cmq/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html42" href="xhtml/pdfx7cmq/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html43" href="xhtml/pdfx7cmq/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html44" href="xhtml/pdfx7cmq/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html45" href="xhtml/pdfx7cmq/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html46" href="xhtml/pdfx7cmq/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html47" href="xhtml/pdfx7cmq/pages/page13.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html48" href="xhtml/pdfx7cmq/pages/page14.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html49" href="xhtml/pdfx7cmq/pages/page15.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html50" href="xhtml/pdfx7cmq/pages/page16.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html51" href="xhtml/pdfx7cmq/pages/page17.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html52" href="xhtml/pdfx7cmq/pages/page18.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html53" href="xhtml/pdfx7cmq/pages/page19.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html54" href="xhtml/pdfx7cmq/pages/page20.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html55" href="xhtml/pdfx7cmq/pages/page21.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html56" href="xhtml/pdfx7cmq/pages/page22.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html57" href="xhtml/pdfx7cmq/pages/page23.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html58" href="xhtml/pdfzpqct/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html59" href="xhtml/pdfzpqct/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html60" href="xhtml/pdfzpqct/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html61" href="xhtml/pdfzpqct/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html62" href="xhtml/pdfzpqct/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html63" href="xhtml/pdfzpqct/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html64" href="xhtml/pdfzpqct/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html65" href="xhtml/pdfzpqct/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html66" href="xhtml/pdfzpqct/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html67" href="xhtml/pdfjpbwi/pages/page102.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html68" href="xhtml/pdfjpbwi/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html69" href="xhtml/pdfjpbwi/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html70" href="xhtml/pdfjpbwi/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html71" href="xhtml/pdfjpbwi/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html72" href="xhtml/pdfjpbwi/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html73" href="xhtml/pdfjpbwi/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html74" href="xhtml/pdfjpbwi/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html75" href="xhtml/pdfjpbwi/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html76" href="xhtml/pdfjpbwi/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html77" href="xhtml/pdfjpbwi/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html78" href="xhtml/pdfgl1nz/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html79" href="xhtml/pdfgl1nz/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html80" href="xhtml/pdfgl1nz/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html81" href="xhtml/pdfgl1nz/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html82" href="xhtml/pdfgl1nz/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html83" href="xhtml/pdfgl1nz/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html84" href="xhtml/pdfgl1nz/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html85" href="xhtml/pdfgl1nz/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html86" href="xhtml/pdfgl1nz/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html87" href="xhtml/pdfgl1nz/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html88" href="xhtml/pdfgl1nz/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html89" href="xhtml/pdfgl1nz/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html90" href="xhtml/pdfuk4vg/pages/page101.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html91" href="xhtml/pdfi9wa4/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html92" href="xhtml/pdfi9wa4/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html93" href="xhtml/pdfi9wa4/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html94" href="xhtml/pdfi9wa4/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html95" href="xhtml/pdfi9wa4/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html96" href="xhtml/pdfi9wa4/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html97" href="xhtml/pdfi9wa4/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html98" href="xhtml/pdfi9wa4/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html99" href="xhtml/pdfi9wa4/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html100" href="xhtml/pdfi9wa4/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html101" href="xhtml/pdfi9wa4/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html102" href="xhtml/pdfi9wa4/pages/page13.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html103" href="xhtml/pdfi9wa4/pages/page14.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html104" href="xhtml/pdfi9wa4/pages/page15.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html105" href="xhtml/pdfrx108/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html106" href="xhtml/pdfrx108/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html107" href="xhtml/pdfrx108/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html108" href="xhtml/pdfrx108/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html109" href="xhtml/pdfrx108/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html110" href="xhtml/pdfrx108/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html111" href="xhtml/pdfrx108/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html112" href="xhtml/pdfrx108/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html113" href="xhtml/pdfrx108/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html114" href="xhtml/pdfrx108/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html115" href="xhtml/pdfrx108/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html116" href="xhtml/pdfrx108/pages/page12.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html117" href="xhtml/pdfrx108/pages/page13.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html118" href="xhtml/pdfrx108/pages/page14.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html119" href="xhtml/pdfrx108/pages/page15.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html120" href="xhtml/pdfrx108/pages/page16.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html121" href="xhtml/pdfrx108/pages/page17.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html122" href="xhtml/pdfslrbo/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html123" href="xhtml/pdfslrbo/pages/page2.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html124" href="xhtml/pdfslrbo/pages/page3.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html125" href="xhtml/pdfslrbo/pages/page4.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html126" href="xhtml/pdfslrbo/pages/page5.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html127" href="xhtml/pdfslrbo/pages/page6.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html128" href="xhtml/pdfslrbo/pages/page7.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html129" href="xhtml/pdfslrbo/pages/page8.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html130" href="xhtml/pdfslrbo/pages/page9.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html131" href="xhtml/pdfslrbo/pages/page10.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html132" href="xhtml/pdfslrbo/pages/page11.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html133" href="xhtml/pdf1n6h1/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="html134" href="xhtml/pdfj9ro1/pages/page1.xhtml" properties="scripted" media-type="application/xhtml+xml"/>
+<item id="contents" href="xhtml/raw/contents.xhtml"  properties="nav" media-type="application/xhtml+xml"/>
+<item id="ncx" href="xhtml/raw/contents.ncx"  media-type="application/x-dtbncx+xml"/>
+<item id="img0" href="imgs/defaultCover.png" media-type="image/png"/>
+<item id="img1" href="imgs/defaultcover01.png" media-type="image/png"/>
+<item id="img2" href="imgs/logo.jpg" properties="cover-image" media-type="image/jpeg"/>
+<item id="img3" href="xhtml/pdf1n6h1/pages/bg1.png" media-type="image/png"/>
+<item id="img4" href="xhtml/pdf1n6h1/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img5" href="xhtml/pdf2erwa/pages/bg1.png" media-type="image/png"/>
+<item id="img6" href="xhtml/pdf2erwa/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img7" href="xhtml/pdf9r768/pages/bg1.png" media-type="image/png"/>
+<item id="img8" href="xhtml/pdf9r768/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img9" href="xhtml/pdfbgcxd/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img10" href="xhtml/pdfdkjm6/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img11" href="xhtml/pdfgajce/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img12" href="xhtml/pdfgl1nz/pages/bg3.png" media-type="image/png"/>
+<item id="img13" href="xhtml/pdfgl1nz/pages/bg4.png" media-type="image/png"/>
+<item id="img14" href="xhtml/pdfgl1nz/pages/bg5.png" media-type="image/png"/>
+<item id="img15" href="xhtml/pdfgl1nz/pages/bg6.png" media-type="image/png"/>
+<item id="img16" href="xhtml/pdfgl1nz/pages/bg7.png" media-type="image/png"/>
+<item id="img17" href="xhtml/pdfgl1nz/pages/bg8.png" media-type="image/png"/>
+<item id="img18" href="xhtml/pdfgl1nz/pages/bg9.png" media-type="image/png"/>
+<item id="img19" href="xhtml/pdfgl1nz/pages/bga.png" media-type="image/png"/>
+<item id="img20" href="xhtml/pdfgl1nz/pages/bgb.png" media-type="image/png"/>
+<item id="img21" href="xhtml/pdfgl1nz/pages/bgc.png" media-type="image/png"/>
+<item id="img22" href="xhtml/pdfgl1nz/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img23" href="xhtml/pdfi9wa4/pages/bg3.png" media-type="image/png"/>
+<item id="img24" href="xhtml/pdfi9wa4/pages/bg4.png" media-type="image/png"/>
+<item id="img25" href="xhtml/pdfi9wa4/pages/bg5.png" media-type="image/png"/>
+<item id="img26" href="xhtml/pdfi9wa4/pages/bg6.png" media-type="image/png"/>
+<item id="img27" href="xhtml/pdfi9wa4/pages/bg7.png" media-type="image/png"/>
+<item id="img28" href="xhtml/pdfi9wa4/pages/bg8.png" media-type="image/png"/>
+<item id="img29" href="xhtml/pdfi9wa4/pages/bg9.png" media-type="image/png"/>
+<item id="img30" href="xhtml/pdfi9wa4/pages/bga.png" media-type="image/png"/>
+<item id="img31" href="xhtml/pdfi9wa4/pages/bgb.png" media-type="image/png"/>
+<item id="img32" href="xhtml/pdfi9wa4/pages/bgc.png" media-type="image/png"/>
+<item id="img33" href="xhtml/pdfi9wa4/pages/bgd.png" media-type="image/png"/>
+<item id="img34" href="xhtml/pdfi9wa4/pages/bge.png" media-type="image/png"/>
+<item id="img35" href="xhtml/pdfi9wa4/pages/bgf.png" media-type="image/png"/>
+<item id="img36" href="xhtml/pdfi9wa4/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img37" href="xhtml/pdfj9ro1/pages/bg1.png" media-type="image/png"/>
+<item id="img38" href="xhtml/pdfj9ro1/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img39" href="xhtml/pdfjpbwi/pages/bg3.png" media-type="image/png"/>
+<item id="img40" href="xhtml/pdfjpbwi/pages/bg4.png" media-type="image/png"/>
+<item id="img41" href="xhtml/pdfjpbwi/pages/bg5.png" media-type="image/png"/>
+<item id="img42" href="xhtml/pdfjpbwi/pages/bg6.png" media-type="image/png"/>
+<item id="img43" href="xhtml/pdfjpbwi/pages/bg7.png" media-type="image/png"/>
+<item id="img44" href="xhtml/pdfjpbwi/pages/bg8.png" media-type="image/png"/>
+<item id="img45" href="xhtml/pdfjpbwi/pages/bg9.png" media-type="image/png"/>
+<item id="img46" href="xhtml/pdfjpbwi/pages/bga.png" media-type="image/png"/>
+<item id="img47" href="xhtml/pdfjpbwi/pages/bgb.png" media-type="image/png"/>
+<item id="img48" href="xhtml/pdfjpbwi/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img49" href="xhtml/pdfkxr7f/pages/bg3.png" media-type="image/png"/>
+<item id="img50" href="xhtml/pdfkxr7f/pages/bg4.png" media-type="image/png"/>
+<item id="img51" href="xhtml/pdfkxr7f/pages/bg5.png" media-type="image/png"/>
+<item id="img52" href="xhtml/pdfkxr7f/pages/bg6.png" media-type="image/png"/>
+<item id="img53" href="xhtml/pdfkxr7f/pages/bg7.png" media-type="image/png"/>
+<item id="img54" href="xhtml/pdfkxr7f/pages/bg8.png" media-type="image/png"/>
+<item id="img55" href="xhtml/pdfkxr7f/pages/bg9.png" media-type="image/png"/>
+<item id="img56" href="xhtml/pdfkxr7f/pages/bga.png" media-type="image/png"/>
+<item id="img57" href="xhtml/pdfkxr7f/pages/bgb.png" media-type="image/png"/>
+<item id="img58" href="xhtml/pdfkxr7f/pages/bgc.png" media-type="image/png"/>
+<item id="img59" href="xhtml/pdfkxr7f/pages/bgd.png" media-type="image/png"/>
+<item id="img60" href="xhtml/pdfkxr7f/pages/bge.png" media-type="image/png"/>
+<item id="img61" href="xhtml/pdfkxr7f/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img62" href="xhtml/pdfoxef9/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img63" href="xhtml/pdfrv4cd/pages/bg3.png" media-type="image/png"/>
+<item id="img64" href="xhtml/pdfrv4cd/pages/bg4.png" media-type="image/png"/>
+<item id="img65" href="xhtml/pdfrv4cd/pages/bg5.png" media-type="image/png"/>
+<item id="img66" href="xhtml/pdfrv4cd/pages/bg6.png" media-type="image/png"/>
+<item id="img67" href="xhtml/pdfrv4cd/pages/bg7.png" media-type="image/png"/>
+<item id="img68" href="xhtml/pdfrv4cd/pages/bg8.png" media-type="image/png"/>
+<item id="img69" href="xhtml/pdfrv4cd/pages/bg9.png" media-type="image/png"/>
+<item id="img70" href="xhtml/pdfrv4cd/pages/bga.png" media-type="image/png"/>
+<item id="img71" href="xhtml/pdfrv4cd/pages/bgb.png" media-type="image/png"/>
+<item id="img72" href="xhtml/pdfrv4cd/pages/bgc.png" media-type="image/png"/>
+<item id="img73" href="xhtml/pdfrv4cd/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img74" href="xhtml/pdfrx108/pages/bg10.png" media-type="image/png"/>
+<item id="img75" href="xhtml/pdfrx108/pages/bg11.png" media-type="image/png"/>
+<item id="img76" href="xhtml/pdfrx108/pages/bg3.png" media-type="image/png"/>
+<item id="img77" href="xhtml/pdfrx108/pages/bg4.png" media-type="image/png"/>
+<item id="img78" href="xhtml/pdfrx108/pages/bg5.png" media-type="image/png"/>
+<item id="img79" href="xhtml/pdfrx108/pages/bg6.png" media-type="image/png"/>
+<item id="img80" href="xhtml/pdfrx108/pages/bg7.png" media-type="image/png"/>
+<item id="img81" href="xhtml/pdfrx108/pages/bg8.png" media-type="image/png"/>
+<item id="img82" href="xhtml/pdfrx108/pages/bg9.png" media-type="image/png"/>
+<item id="img83" href="xhtml/pdfrx108/pages/bga.png" media-type="image/png"/>
+<item id="img84" href="xhtml/pdfrx108/pages/bgb.png" media-type="image/png"/>
+<item id="img85" href="xhtml/pdfrx108/pages/bgc.png" media-type="image/png"/>
+<item id="img86" href="xhtml/pdfrx108/pages/bgd.png" media-type="image/png"/>
+<item id="img87" href="xhtml/pdfrx108/pages/bge.png" media-type="image/png"/>
+<item id="img88" href="xhtml/pdfrx108/pages/bgf.png" media-type="image/png"/>
+<item id="img89" href="xhtml/pdfrx108/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img90" href="xhtml/pdfslrbo/pages/bg3.png" media-type="image/png"/>
+<item id="img91" href="xhtml/pdfslrbo/pages/bg4.png" media-type="image/png"/>
+<item id="img92" href="xhtml/pdfslrbo/pages/bg5.png" media-type="image/png"/>
+<item id="img93" href="xhtml/pdfslrbo/pages/bg6.png" media-type="image/png"/>
+<item id="img94" href="xhtml/pdfslrbo/pages/bg7.png" media-type="image/png"/>
+<item id="img95" href="xhtml/pdfslrbo/pages/bg8.png" media-type="image/png"/>
+<item id="img96" href="xhtml/pdfslrbo/pages/bg9.png" media-type="image/png"/>
+<item id="img97" href="xhtml/pdfslrbo/pages/bga.png" media-type="image/png"/>
+<item id="img98" href="xhtml/pdfslrbo/pages/bgb.png" media-type="image/png"/>
+<item id="img99" href="xhtml/pdfslrbo/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img100" href="xhtml/pdfud6fq/pages/bg10.png" media-type="image/png"/>
+<item id="img101" href="xhtml/pdfud6fq/pages/bg11.png" media-type="image/png"/>
+<item id="img102" href="xhtml/pdfud6fq/pages/bg12.png" media-type="image/png"/>
+<item id="img103" href="xhtml/pdfud6fq/pages/bg13.png" media-type="image/png"/>
+<item id="img104" href="xhtml/pdfud6fq/pages/bg14.png" media-type="image/png"/>
+<item id="img105" href="xhtml/pdfud6fq/pages/bg15.png" media-type="image/png"/>
+<item id="img106" href="xhtml/pdfud6fq/pages/bg16.png" media-type="image/png"/>
+<item id="img107" href="xhtml/pdfud6fq/pages/bg17.png" media-type="image/png"/>
+<item id="img108" href="xhtml/pdfud6fq/pages/bg2.png" media-type="image/png"/>
+<item id="img109" href="xhtml/pdfud6fq/pages/bg3.png" media-type="image/png"/>
+<item id="img110" href="xhtml/pdfud6fq/pages/bg4.png" media-type="image/png"/>
+<item id="img111" href="xhtml/pdfud6fq/pages/bg5.png" media-type="image/png"/>
+<item id="img112" href="xhtml/pdfud6fq/pages/bg6.png" media-type="image/png"/>
+<item id="img113" href="xhtml/pdfud6fq/pages/bg7.png" media-type="image/png"/>
+<item id="img114" href="xhtml/pdfud6fq/pages/bg8.png" media-type="image/png"/>
+<item id="img115" href="xhtml/pdfud6fq/pages/bg9.png" media-type="image/png"/>
+<item id="img116" href="xhtml/pdfud6fq/pages/bga.png" media-type="image/png"/>
+<item id="img117" href="xhtml/pdfud6fq/pages/bgb.png" media-type="image/png"/>
+<item id="img118" href="xhtml/pdfud6fq/pages/bgc.png" media-type="image/png"/>
+<item id="img119" href="xhtml/pdfud6fq/pages/bgd.png" media-type="image/png"/>
+<item id="img120" href="xhtml/pdfud6fq/pages/bge.png" media-type="image/png"/>
+<item id="img121" href="xhtml/pdfud6fq/pages/bgf.png" media-type="image/png"/>
+<item id="img122" href="xhtml/pdfud6fq/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img123" href="xhtml/pdfuk4vg/pages/bg3.png" media-type="image/png"/>
+<item id="img124" href="xhtml/pdfuk4vg/pages/bg4.png" media-type="image/png"/>
+<item id="img125" href="xhtml/pdfuk4vg/pages/bg5.png" media-type="image/png"/>
+<item id="img126" href="xhtml/pdfuk4vg/pages/bg6.png" media-type="image/png"/>
+<item id="img127" href="xhtml/pdfuk4vg/pages/bg7.png" media-type="image/png"/>
+<item id="img128" href="xhtml/pdfuk4vg/pages/bg8.png" media-type="image/png"/>
+<item id="img129" href="xhtml/pdfuk4vg/pages/bg9.png" media-type="image/png"/>
+<item id="img130" href="xhtml/pdfuk4vg/pages/bga.png" media-type="image/png"/>
+<item id="img131" href="xhtml/pdfuk4vg/pages/bgb.png" media-type="image/png"/>
+<item id="img132" href="xhtml/pdfuk4vg/pages/bgc.png" media-type="image/png"/>
+<item id="img133" href="xhtml/pdfuk4vg/pages/bgd.png" media-type="image/png"/>
+<item id="img134" href="xhtml/pdfuk4vg/pages/bge.png" media-type="image/png"/>
+<item id="img135" href="xhtml/pdfuk4vg/pages/bgf.png" media-type="image/png"/>
+<item id="img136" href="xhtml/pdfuk4vg/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img137" href="xhtml/pdfvr21f/pages/page1.gif" media-type="image/gif"/>
+<item id="img138" href="xhtml/pdfx7cmq/pages/bg10.png" media-type="image/png"/>
+<item id="img139" href="xhtml/pdfx7cmq/pages/bg11.png" media-type="image/png"/>
+<item id="img140" href="xhtml/pdfx7cmq/pages/bg12.png" media-type="image/png"/>
+<item id="img141" href="xhtml/pdfx7cmq/pages/bg13.png" media-type="image/png"/>
+<item id="img142" href="xhtml/pdfx7cmq/pages/bg14.png" media-type="image/png"/>
+<item id="img143" href="xhtml/pdfx7cmq/pages/bg15.png" media-type="image/png"/>
+<item id="img144" href="xhtml/pdfx7cmq/pages/bg16.png" media-type="image/png"/>
+<item id="img145" href="xhtml/pdfx7cmq/pages/bg17.png" media-type="image/png"/>
+<item id="img146" href="xhtml/pdfx7cmq/pages/bg2.png" media-type="image/png"/>
+<item id="img147" href="xhtml/pdfx7cmq/pages/bg3.png" media-type="image/png"/>
+<item id="img148" href="xhtml/pdfx7cmq/pages/bg4.png" media-type="image/png"/>
+<item id="img149" href="xhtml/pdfx7cmq/pages/bg5.png" media-type="image/png"/>
+<item id="img150" href="xhtml/pdfx7cmq/pages/bg6.png" media-type="image/png"/>
+<item id="img151" href="xhtml/pdfx7cmq/pages/bg7.png" media-type="image/png"/>
+<item id="img152" href="xhtml/pdfx7cmq/pages/bg8.png" media-type="image/png"/>
+<item id="img153" href="xhtml/pdfx7cmq/pages/bg9.png" media-type="image/png"/>
+<item id="img154" href="xhtml/pdfx7cmq/pages/bga.png" media-type="image/png"/>
+<item id="img155" href="xhtml/pdfx7cmq/pages/bgb.png" media-type="image/png"/>
+<item id="img156" href="xhtml/pdfx7cmq/pages/bgc.png" media-type="image/png"/>
+<item id="img157" href="xhtml/pdfx7cmq/pages/bgd.png" media-type="image/png"/>
+<item id="img158" href="xhtml/pdfx7cmq/pages/bge.png" media-type="image/png"/>
+<item id="img159" href="xhtml/pdfx7cmq/pages/bgf.png" media-type="image/png"/>
+<item id="img160" href="xhtml/pdfx7cmq/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img161" href="xhtml/pdfyyxgc/pages/bg1.png" media-type="image/png"/>
+<item id="img162" href="xhtml/pdfyyxgc/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img163" href="xhtml/pdfz3n1y/pages/bg3.png" media-type="image/png"/>
+<item id="img164" href="xhtml/pdfz3n1y/pages/bg4.png" media-type="image/png"/>
+<item id="img165" href="xhtml/pdfz3n1y/pages/bg5.png" media-type="image/png"/>
+<item id="img166" href="xhtml/pdfz3n1y/pages/bg6.png" media-type="image/png"/>
+<item id="img167" href="xhtml/pdfz3n1y/pages/bg7.png" media-type="image/png"/>
+<item id="img168" href="xhtml/pdfz3n1y/pages/bg8.png" media-type="image/png"/>
+<item id="img169" href="xhtml/pdfz3n1y/pages/bg9.png" media-type="image/png"/>
+<item id="img170" href="xhtml/pdfz3n1y/pages/bga.png" media-type="image/png"/>
+<item id="img171" href="xhtml/pdfz3n1y/pages/bgb.png" media-type="image/png"/>
+<item id="img172" href="xhtml/pdfz3n1y/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img173" href="xhtml/pdfzpqct/pages/bg3.png" media-type="image/png"/>
+<item id="img174" href="xhtml/pdfzpqct/pages/bg4.png" media-type="image/png"/>
+<item id="img175" href="xhtml/pdfzpqct/pages/bg5.png" media-type="image/png"/>
+<item id="img176" href="xhtml/pdfzpqct/pages/bg6.png" media-type="image/png"/>
+<item id="img177" href="xhtml/pdfzpqct/pages/bg7.png" media-type="image/png"/>
+<item id="img178" href="xhtml/pdfzpqct/pages/bg8.png" media-type="image/png"/>
+<item id="img179" href="xhtml/pdfzpqct/pages/bg9.png" media-type="image/png"/>
+<item id="img180" href="xhtml/pdfzpqct/pages/pdf2htmlEX-64x64.png" media-type="image/png"/>
+<item id="img181" href="../_kmeta/imgUser/logo.jpg" media-type="image/jpeg"/>
+<item id="img182" href="../_kmeta/imgUser/logo01.jpg" media-type="image/jpeg"/>
+<item id="img183" href="../_kmeta/imgUser/logo02.jpg" media-type="image/jpeg"/>
+<item id="img184" href="../_kmeta/imgUser/somece-icat.jpg" media-type="image/jpeg"/>
+<item id="css0" href="css/base.css" media-type="text/css"/>
+<item id="css1" href="css/global.css" media-type="text/css"/>
+<item id="css2" href="css/kotobeeInteractive.css" media-type="text/css"/>
+<item id="css3" href="xhtml/pdf1n6h1/pages/base.min.css" media-type="text/css"/>
+<item id="css4" href="xhtml/pdf1n6h1/pages/pdf.css" media-type="text/css"/>
+<item id="css5" href="xhtml/pdf2erwa/pages/base.min.css" media-type="text/css"/>
+<item id="css6" href="xhtml/pdf2erwa/pages/pdf.css" media-type="text/css"/>
+<item id="css7" href="xhtml/pdf9r768/pages/base.min.css" media-type="text/css"/>
+<item id="css8" href="xhtml/pdf9r768/pages/pdf.css" media-type="text/css"/>
+<item id="css9" href="xhtml/pdfbgcxd/pages/base.min.css" media-type="text/css"/>
+<item id="css10" href="xhtml/pdfbgcxd/pages/pdf.css" media-type="text/css"/>
+<item id="css11" href="xhtml/pdfdc9i8/pages/base.min.css" media-type="text/css"/>
+<item id="css12" href="xhtml/pdfdc9i8/pages/pdf.css" media-type="text/css"/>
+<item id="css13" href="xhtml/pdfdkjm6/pages/base.min.css" media-type="text/css"/>
+<item id="css14" href="xhtml/pdfdkjm6/pages/pdf.css" media-type="text/css"/>
+<item id="css15" href="xhtml/pdfgajce/pages/base.min.css" media-type="text/css"/>
+<item id="css16" href="xhtml/pdfgajce/pages/pdf.css" media-type="text/css"/>
+<item id="css17" href="xhtml/pdfgl1nz/pages/base.min.css" media-type="text/css"/>
+<item id="css18" href="xhtml/pdfgl1nz/pages/pdf.css" media-type="text/css"/>
+<item id="css19" href="xhtml/pdfi9wa4/pages/base.min.css" media-type="text/css"/>
+<item id="css20" href="xhtml/pdfi9wa4/pages/pdf.css" media-type="text/css"/>
+<item id="css21" href="xhtml/pdfj9ro1/pages/base.min.css" media-type="text/css"/>
+<item id="css22" href="xhtml/pdfj9ro1/pages/pdf.css" media-type="text/css"/>
+<item id="css23" href="xhtml/pdfjpbwi/pages/base.min.css" media-type="text/css"/>
+<item id="css24" href="xhtml/pdfjpbwi/pages/pdf.css" media-type="text/css"/>
+<item id="css25" href="xhtml/pdfkxr7f/pages/base.min.css" media-type="text/css"/>
+<item id="css26" href="xhtml/pdfkxr7f/pages/pdf.css" media-type="text/css"/>
+<item id="css27" href="xhtml/pdfoxef9/pages/base.min.css" media-type="text/css"/>
+<item id="css28" href="xhtml/pdfoxef9/pages/pdf.css" media-type="text/css"/>
+<item id="css29" href="xhtml/pdfrv4cd/pages/base.min.css" media-type="text/css"/>
+<item id="css30" href="xhtml/pdfrv4cd/pages/pdf.css" media-type="text/css"/>
+<item id="css31" href="xhtml/pdfrx108/pages/base.min.css" media-type="text/css"/>
+<item id="css32" href="xhtml/pdfrx108/pages/pdf.css" media-type="text/css"/>
+<item id="css33" href="xhtml/pdfslrbo/pages/base.min.css" media-type="text/css"/>
+<item id="css34" href="xhtml/pdfslrbo/pages/pdf.css" media-type="text/css"/>
+<item id="css35" href="xhtml/pdfud6fq/pages/base.min.css" media-type="text/css"/>
+<item id="css36" href="xhtml/pdfud6fq/pages/pdf.css" media-type="text/css"/>
+<item id="css37" href="xhtml/pdfuk4vg/pages/base.min.css" media-type="text/css"/>
+<item id="css38" href="xhtml/pdfuk4vg/pages/pdf.css" media-type="text/css"/>
+<item id="css39" href="xhtml/pdfvr21f/pages/base.min.css" media-type="text/css"/>
+<item id="css40" href="xhtml/pdfvr21f/pages/pdf.css" media-type="text/css"/>
+<item id="css41" href="xhtml/pdfx7cmq/pages/base.min.css" media-type="text/css"/>
+<item id="css42" href="xhtml/pdfx7cmq/pages/pdf.css" media-type="text/css"/>
+<item id="css43" href="xhtml/pdfyyxgc/pages/base.min.css" media-type="text/css"/>
+<item id="css44" href="xhtml/pdfyyxgc/pages/pdf.css" media-type="text/css"/>
+<item id="css45" href="xhtml/pdfz3n1y/pages/base.min.css" media-type="text/css"/>
+<item id="css46" href="xhtml/pdfz3n1y/pages/pdf.css" media-type="text/css"/>
+<item id="css47" href="xhtml/pdfzpqct/pages/base.min.css" media-type="text/css"/>
+<item id="css48" href="xhtml/pdfzpqct/pages/pdf.css" media-type="text/css"/>
+<item id="js0" href="js/global.js" media-type="text/javascript"/>
+<item id="js1" href="js/kotobeeInteractive.js" media-type="text/javascript"/>
+<item id="js3" href="xhtml/pdf1n6h1/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js4" href="xhtml/pdf1n6h1/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js5" href="xhtml/pdf2erwa/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js6" href="xhtml/pdf2erwa/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js7" href="xhtml/pdf9r768/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js8" href="xhtml/pdf9r768/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js9" href="xhtml/pdfbgcxd/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js10" href="xhtml/pdfbgcxd/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js11" href="xhtml/pdfdc9i8/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js12" href="xhtml/pdfdc9i8/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js13" href="xhtml/pdfdkjm6/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js14" href="xhtml/pdfdkjm6/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js15" href="xhtml/pdfgajce/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js16" href="xhtml/pdfgajce/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js17" href="xhtml/pdfgl1nz/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js18" href="xhtml/pdfgl1nz/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js19" href="xhtml/pdfi9wa4/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js20" href="xhtml/pdfi9wa4/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js21" href="xhtml/pdfj9ro1/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js22" href="xhtml/pdfj9ro1/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js23" href="xhtml/pdfjpbwi/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js24" href="xhtml/pdfjpbwi/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js25" href="xhtml/pdfkxr7f/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js26" href="xhtml/pdfkxr7f/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js27" href="xhtml/pdfoxef9/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js28" href="xhtml/pdfoxef9/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js29" href="xhtml/pdfrv4cd/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js30" href="xhtml/pdfrv4cd/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js31" href="xhtml/pdfrx108/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js32" href="xhtml/pdfrx108/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js33" href="xhtml/pdfslrbo/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js34" href="xhtml/pdfslrbo/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js35" href="xhtml/pdfud6fq/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js36" href="xhtml/pdfud6fq/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js37" href="xhtml/pdfuk4vg/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js38" href="xhtml/pdfuk4vg/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js39" href="xhtml/pdfvr21f/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js40" href="xhtml/pdfvr21f/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js41" href="xhtml/pdfx7cmq/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js42" href="xhtml/pdfx7cmq/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js43" href="xhtml/pdfyyxgc/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js44" href="xhtml/pdfyyxgc/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js45" href="xhtml/pdfz3n1y/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js46" href="xhtml/pdfz3n1y/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js47" href="xhtml/pdfzpqct/pages/compatibility.min.js" media-type="text/javascript"/>
+<item id="js48" href="xhtml/pdfzpqct/pages/pdf2htmlEX.min.js" media-type="text/javascript"/>
+<item id="js49" href="../_kmeta/config.js" media-type="text/javascript"/>
+<item id="font0" href="xhtml/pdf1n6h1/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font1" href="xhtml/pdf9r768/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font2" href="xhtml/pdf9r768/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font3" href="xhtml/pdf9r768/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font4" href="xhtml/pdfbgcxd/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font5" href="xhtml/pdfbgcxd/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font6" href="xhtml/pdfdc9i8/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font7" href="xhtml/pdfdc9i8/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font8" href="xhtml/pdfdc9i8/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font9" href="xhtml/pdfdc9i8/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font10" href="xhtml/pdfdc9i8/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font11" href="xhtml/pdfdc9i8/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font12" href="xhtml/pdfdc9i8/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font13" href="xhtml/pdfdkjm6/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font14" href="xhtml/pdfdkjm6/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font15" href="xhtml/pdfdkjm6/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font16" href="xhtml/pdfdkjm6/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font17" href="xhtml/pdfgajce/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font18" href="xhtml/pdfgajce/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font19" href="xhtml/pdfgl1nz/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font20" href="xhtml/pdfgl1nz/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font21" href="xhtml/pdfgl1nz/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font22" href="xhtml/pdfgl1nz/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font23" href="xhtml/pdfgl1nz/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font24" href="xhtml/pdfgl1nz/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font25" href="xhtml/pdfgl1nz/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font26" href="xhtml/pdfi9wa4/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font27" href="xhtml/pdfi9wa4/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font28" href="xhtml/pdfi9wa4/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font29" href="xhtml/pdfi9wa4/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font30" href="xhtml/pdfi9wa4/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font31" href="xhtml/pdfi9wa4/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font32" href="xhtml/pdfi9wa4/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font33" href="xhtml/pdfjpbwi/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font34" href="xhtml/pdfjpbwi/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font35" href="xhtml/pdfjpbwi/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font36" href="xhtml/pdfjpbwi/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font37" href="xhtml/pdfjpbwi/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font38" href="xhtml/pdfjpbwi/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font39" href="xhtml/pdfjpbwi/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font40" href="xhtml/pdfkxr7f/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font41" href="xhtml/pdfkxr7f/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font42" href="xhtml/pdfkxr7f/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font43" href="xhtml/pdfkxr7f/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font44" href="xhtml/pdfkxr7f/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font45" href="xhtml/pdfkxr7f/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font46" href="xhtml/pdfkxr7f/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font47" href="xhtml/pdfkxr7f/pages/f8.woff" media-type="application-type/font-woff"/>
+<item id="font48" href="xhtml/pdfkxr7f/pages/f9.woff" media-type="application-type/font-woff"/>
+<item id="font49" href="xhtml/pdfkxr7f/pages/fa.woff" media-type="application-type/font-woff"/>
+<item id="font50" href="xhtml/pdfoxef9/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font51" href="xhtml/pdfoxef9/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font52" href="xhtml/pdfoxef9/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font53" href="xhtml/pdfrv4cd/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font54" href="xhtml/pdfrv4cd/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font55" href="xhtml/pdfrv4cd/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font56" href="xhtml/pdfrv4cd/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font57" href="xhtml/pdfrv4cd/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font58" href="xhtml/pdfrv4cd/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font59" href="xhtml/pdfrx108/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font60" href="xhtml/pdfrx108/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font61" href="xhtml/pdfrx108/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font62" href="xhtml/pdfrx108/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font63" href="xhtml/pdfrx108/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font64" href="xhtml/pdfrx108/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font65" href="xhtml/pdfrx108/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font66" href="xhtml/pdfslrbo/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font67" href="xhtml/pdfslrbo/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font68" href="xhtml/pdfslrbo/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font69" href="xhtml/pdfslrbo/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font70" href="xhtml/pdfslrbo/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font71" href="xhtml/pdfslrbo/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font72" href="xhtml/pdfslrbo/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font73" href="xhtml/pdfud6fq/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font74" href="xhtml/pdfud6fq/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font75" href="xhtml/pdfud6fq/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font76" href="xhtml/pdfud6fq/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font77" href="xhtml/pdfud6fq/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font78" href="xhtml/pdfud6fq/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font79" href="xhtml/pdfud6fq/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font80" href="xhtml/pdfud6fq/pages/f8.woff" media-type="application-type/font-woff"/>
+<item id="font81" href="xhtml/pdfud6fq/pages/f9.woff" media-type="application-type/font-woff"/>
+<item id="font82" href="xhtml/pdfuk4vg/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font83" href="xhtml/pdfuk4vg/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font84" href="xhtml/pdfuk4vg/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font85" href="xhtml/pdfuk4vg/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font86" href="xhtml/pdfuk4vg/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font87" href="xhtml/pdfuk4vg/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font88" href="xhtml/pdfuk4vg/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font89" href="xhtml/pdfvr21f/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font90" href="xhtml/pdfvr21f/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font91" href="xhtml/pdfvr21f/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font92" href="xhtml/pdfvr21f/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font93" href="xhtml/pdfvr21f/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font94" href="xhtml/pdfvr21f/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font95" href="xhtml/pdfvr21f/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font96" href="xhtml/pdfvr21f/pages/f8.woff" media-type="application-type/font-woff"/>
+<item id="font97" href="xhtml/pdfvr21f/pages/f9.woff" media-type="application-type/font-woff"/>
+<item id="font98" href="xhtml/pdfvr21f/pages/fa.woff" media-type="application-type/font-woff"/>
+<item id="font99" href="xhtml/pdfx7cmq/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font100" href="xhtml/pdfx7cmq/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font101" href="xhtml/pdfx7cmq/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font102" href="xhtml/pdfx7cmq/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font103" href="xhtml/pdfx7cmq/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font104" href="xhtml/pdfx7cmq/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font105" href="xhtml/pdfx7cmq/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font106" href="xhtml/pdfx7cmq/pages/f8.woff" media-type="application-type/font-woff"/>
+<item id="font107" href="xhtml/pdfx7cmq/pages/f9.woff" media-type="application-type/font-woff"/>
+<item id="font108" href="xhtml/pdfyyxgc/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font109" href="xhtml/pdfyyxgc/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font110" href="xhtml/pdfyyxgc/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font111" href="xhtml/pdfyyxgc/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font112" href="xhtml/pdfz3n1y/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font113" href="xhtml/pdfz3n1y/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font114" href="xhtml/pdfz3n1y/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font115" href="xhtml/pdfz3n1y/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font116" href="xhtml/pdfz3n1y/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font117" href="xhtml/pdfz3n1y/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font118" href="xhtml/pdfz3n1y/pages/f7.woff" media-type="application-type/font-woff"/>
+<item id="font119" href="xhtml/pdfzpqct/pages/f1.woff" media-type="application-type/font-woff"/>
+<item id="font120" href="xhtml/pdfzpqct/pages/f2.woff" media-type="application-type/font-woff"/>
+<item id="font121" href="xhtml/pdfzpqct/pages/f3.woff" media-type="application-type/font-woff"/>
+<item id="font122" href="xhtml/pdfzpqct/pages/f4.woff" media-type="application-type/font-woff"/>
+<item id="font123" href="xhtml/pdfzpqct/pages/f5.woff" media-type="application-type/font-woff"/>
+<item id="font124" href="xhtml/pdfzpqct/pages/f6.woff" media-type="application-type/font-woff"/>
+<item id="font125" href="xhtml/pdfzpqct/pages/f7.woff" media-type="application-type/font-woff"/>
+
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="html0" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html1" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html2" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html3" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html4" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html5" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html6" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html7" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html8" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html9" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html10" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html11" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html12" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html13" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html14" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html15" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html16" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html17" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html18" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html19" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html20" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html21" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html22" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html23" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html24" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html25" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html26" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html27" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html28" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html29" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html30" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html31" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html32" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html33" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html34" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html35" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html36" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html37" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html38" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html39" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html40" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html41" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html42" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html43" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html44" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html45" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html46" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html47" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html48" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html49" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html50" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html51" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html52" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html53" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html54" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html55" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html56" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html57" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html58" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html59" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html60" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html61" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html62" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html63" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html64" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html65" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html66" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html67" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html68" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html69" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html70" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html71" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html72" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html73" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html74" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html75" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html76" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html77" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html78" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html79" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html80" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html81" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html82" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html83" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html84" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html85" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html86" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html87" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html88" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html89" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html90" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html91" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html92" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html93" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html94" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html95" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html96" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html97" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html98" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html99" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html100" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html101" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html102" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html103" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html104" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html105" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html106" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html107" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html108" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html109" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html110" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html111" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html112" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html113" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html114" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html115" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html116" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html117" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html118" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html119" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html120" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html121" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html122" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html123" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html124" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html125" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html126" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html127" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html128" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html129" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html130" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html131" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html132" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html133" properties="rendition:layout-pre-paginated"/>
+<itemref idref="html134" properties="rendition:layout-pre-paginated"/>
+
+    </spine>
+
+    
+    
+</package>

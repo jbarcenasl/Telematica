@@ -1,0 +1,782 @@
+<!--?xml version='1.0' encoding='UTF-8'?--><!DOCTYPE html><html xml:lang="en-us" lang="en-us" xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops"><head>
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/global.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/kotobeeInteractive.css" />
+    <script type="text/javascript" src="../../js/kotobeeInteractive.js"></script>
+    <script type="text/javascript" src="../../js/global.js"></script>
+    <title>Diseño y validación de una microarquitectura </title>
+    
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+ </head>
+<body>
+<p>&#160;</p>
+
+<p style="text-align: center;">&#160;</p>
+
+<table hspace="0" style="width:636px" vspace="0">
+	<tbody>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Diseño y validación de una microarquitectura para un driver de motores a pasos unipolares y bipolares en FPGA</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">&#160;</p>
+
+<table hspace="0" style="height:104px; mso-element-frame-height:59.05pt; width:617px" vspace="0">
+	<tbody>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Jhon F. Rodriguez<sup>1</sup> y J. C. Sosa<sup>1</sup>, J. A. Olvera<sup>1</sup></p>
+
+			<p style="text-align: justify;"><sup>1</sup>Instituto Politécnico Nacional, CICATA-Qro</p>
+
+			<p style="text-align: justify;">Cerro Blanco 141, Colinas del Cimatario, 76090 Santiago de Querétaro</p>
+
+			<p style="text-align: justify;"><a href="mailto:jhonrodriguez@unisangil.edu.co">jhonrodriguez@unisangil.edu.co</a>, jcsosa@ipn.mx</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p style="text-align: justify;">&#160;</p>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="margin-left: 1cm; text-align: justify;"><strong>Resumen.</strong> En la actualidad la tecnología electrónica está basada en los sistemas embebidos, estos son sistemas de hardware y software, de propósito específico embebidos que resuelve un problema. Gran parte de los sistemas embebidos están basados en los dispositivos (<em>Field Programmable Gate Arrays</em>, FPGA). Estas tarjetas son configuradas o programadas mediante el uso de VHDL (<em>Hardware Description Language</em>), el cual permite modelar y diseñar circuitos electrónicos digitales en plataformas. Dentro de las aplicaciones más importantes se encuentran los sistemas inteligentes, controles de aterrizaje automático, sistemas robóticos y controles multivariables. El objetivo de este trabajo consiste en diseñar y validar una microarquitectura para un controlador (<em>driver</em>) de motores a pasos unipolares y bipolares, empleando un dispositivo del tipo FPGA y el lenguaje VHDL. Para ello se empleó la tarjeta de desarrollo Nexys 3, la cual posee la FPGA Spartan 6 xc6slx16-3csg324 que puede soportar un soft-core MicroBlaze y el ISE Design Suito v. 14.7 de Xilinx. Se empleó sólo el 2% de los elementos lógicos, 103 LUT-FF de 230 y IOBs 12 de los 232 equivalente al 5%, del FPGA.</p>
+
+<p style="text-align: justify;"><strong>Keywords</strong>: VHDL, FPGA, motor a pasos, sistemas robóticos.</p>
+
+<h3 style="text-align: justify;"><strong>1.</strong><strong>Introducción</strong></h3>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;</p>
+
+<p style="text-align: justify;">En 1985, Xilinx Incorporated introdujo una idea completamente nueva en el campo de dispositivos programables, esta idea es desarrolla y las FPGAs se empezaron a fabricar. Hoy en día Xilinx es el principal vendedor de FPGAs. Hasta ese año los dispositivos que se usaban cuando se necesitaba una gran cantidad de lógica combinacional y secuencial eran los <em>Application Specific Integrated Circuit</em> (ASIC), cuyo tiempo de desarrollo es muy largo, muchos meses llegando hasta años, y costo elevado de adquisición. Por ello las FPGAs logran insertarse rápidamente en un mercado que no tenía competencia. Hoy en día hay varios fabricantes entre los que se destacan FPGAs de empresas como Xilinx Corporation, Altera Corporation, Actel Corporation y Lattice Semiconductor [1].</p>
+
+<p style="text-align: justify;">Un FPGA es un dispositivo que un diseñador de sistemas digitales puede programar, después que está soldado en el circuito impreso, para que funcione de un modo determinado. Los FPGAs son fabricados con conexiones y lógica programables [2]. El diseñador desarrolla su sistema digital usando herramientas tipo EDA (<em>Electronics Design Automation</em>), sean dibujos esquemáticos o VHDL, para poder plasmar el sistema en lógica digital. Luego de simular satisfactoriamente el sistema digital comprobando su funcionalidad se usan herramientas específicas del vendedor del FPGA para crear un archivo de configuración del FPGA, el cual describe todas las conexiones, interconexiones y lógica que necesita ser programada dentro del FPGA para poder implementar el sistema digital desarrollado. Entonces, a través de un cable USB se conecta el FPGA o el circuito impreso en cual está soldado el FPGA, a una PC y usando el software de configuración del FPGA se descarga el archivo de configuración. Una vez comprobado el correcto funcionamiento del sistema en el FPGA se graba el archivo de configuración en una memoria novolátil que el FPGA leerá y usará para autoconfigurarse cada vez que se aplica la tensión de alimentación al FPGA o cada vez que se desee reconfigurar el FPGA [2].</p>
+
+<p style="text-align: justify;">Todos las FPGAs, independientemente del fabricante, tienen ciertos elementos en común, tienen un arreglo tipo matricial de elementos lógicos, como flips-flops y lógica combinacional, que se configuran usando cierta tecnología de programación. Los terminales de entrada y salida del FPGA usan celdas especiales de E/S que son diferentes de las celdas de elementos lógicos. Además, tienen un esquema de interconexión programable que permite la conexión entre las celdas de elementos lógicos entre sí, y con las celdas de E/S. La programación de las interconexiones y de los elementos lógicos puede o no ser permanente, eso depende de la tecnología de programación usada.</p>
+
+<p style="text-align: justify;">El diseño de los sistemas avanzados parte del análisis de la microarquitectura, la cual se debe distinguirse de la arquitectura de conjunto de instrucciones. Esta última es una imagen abstracta de un sistema de computación como es visto por un programador en lenguaje máquina, e incluye el conjunto de instrucciones, modos de dirección de memoria, registros del procesador, formatos de direcciones y datos. La microarquitectura, en cambio, es de nivel más inferior, más concreto [3]. Muestra las partes constituyentes del sistema y cómo se interconectan e interoperan, para así implementar la especificación de arquitectura. Diferentes máquinas podrían tener una misma arquitectura de conjunto de instrucciones, y así ser capaces de ejecutar los mismos programas, sin embargo, pueden tener diferentes microarquitecturas. Estas diferentes microarquitecturas (junto con los avances en las tecnologías de fabricación de semiconductores) son las que permiten nuevas generaciones de procesadores que permiten alcanzar mejores niveles de performance comparadas con las generaciones previas. En teoría, una única microarquitectura (especialmente si ésta incluye microcódigo) podría ser usada para implementar dos conjuntos de instrucciones diferentes, por la programación de dos almacenes de control diferentes (el almacén de control almacena el microprograma del CPU).</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">Sin embargo, para poder desarrollar e implementar las anteriores sentencias, es necesario el uso de herramientas que permitan describir y configurar el circuito u sistema que se desea implementar. Por tanto, para dar solución a este hecho se hace uso del VHDL [4], el cual describe el comportamiento de un circuito electrónico o un sistema, donde el circuito o sistema puede ser implementado. VHDL fue estandarizado por la IEEE con el estándar IEEE 1076. Además, VHDL es un lenguaje de descripción de circuitos electrónicos digitales que utiliza distintos niveles de abstracción. Esto significa que VHDL permite acelerar el proceso de diseño.</p>
+
+<p style="text-align: justify;">En particular VHDL permite tanto una descripción de la estructura del circuito (descripción a partir de subcircuitos más sencillos), como la especificación de la funcionalidad de un circuito utilizando formas familiares a los lenguajes de programación [5]. La misión más importante de un lenguaje de descripción es que sea capaz de simular perfectamente el comportamiento lógico de un circuito sin que el programador necesite imponer restricciones. Por ejemplo, una ejecución del código utilizando las reglas básicas de cualquier lenguaje de programación al uso daría dos resultados diferentes sobre la misma descripción del circuito. Esto es debido a que en VHDL todos los circuitos trabajan a la vez para obtener el resultado (todo se ejecuta en paralelo) mientras que en software el orden de las instrucciones delimita la actualización de las variables (ejecución secuencial de las instrucciones).</p>
+
+<p style="text-align: justify;">Los circuitos descritos en VHDL pueden ser simulados utilizando herramientas de simulación que reproducen el funcionamiento del circuito descrito. Para la realización de la simulación existe un estándar aprobado por el IEEE, en el cual se explican todas las expresiones propias de VHDL y cómo se simulan. Además, existen herramientas que transforman una descripción VHDL en un circuito real (a este proceso se le denomina síntesis). La sintaxis para síntesis y su implementación final, aunque sigue unas normas generales, depende en gran medida de la herramienta de síntesis seleccionada.</p>
+
+<h1 style="text-align: justify;"><strong>2.</strong><strong>Metodología de diseño</strong></h1>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">El desarrollo de las nuevas tecnologías de fabricación de circuitos integrados durante las últimas décadas ha propiciado a su vez la aparición de herramientas software y hardware de diseño y simulación de dispositivos electrónicos cada vez más potentes y avanzadas. Éstas, a su vez, han posibilitado la creación de nuevos dispositivos y circuitos electrónicos de una complejidad y funcionalidad con un crecimiento prácticamente exponencial. A su vez, esta complejidad creciente en los diseños ha originado que las metodologías de diseño sufran también una evolución [6].</p>
+
+<p style="text-align: justify;">En los inicios, todo el diseño de un nuevo circuito integrado se realizaba a mano, transistor a transistor, indicando sus dimensiones, su ubicación en el plano base y su conexionado con el resto de las componentes del circuito. A esto se le conoce como diseño ‘<em>Bottom-Up</em>’ (ascendente). Según este tipo de metodología, se ha de comenzar el diseño a partir de los elementos más pequeños para conseguir que la suma de sus efectos realice la aplicación deseada. Esta metodología no implica una dependencia jerárquica funcional de los elementos del circuito, por lo que se trata de una técnica poco eficiente cuando se pretende hacer funcionar un sistema compuesto por miles de componentes de bajo nivel. Además, el sistema no puede comprobarse (simularse) hasta que no está totalmente terminado, y un gran número de decisiones críticas a nivel de tecnología de fabricación deben tomarse al comienzo del diseño. Es por ello que, cuando los proyectos son complejos o de gran envergadura, esta forma de trabajo conlleva un alto costo en la producción, ya que los fallos y errores durante el diseño son frecuentes debido a la naturaleza, sensibilidad a los cambios y/o ajustes de los elementos más pequeños.</p>
+
+<p style="text-align: justify;">Hasta este momento, sólo existían herramientas de simulación de circuitos eléctricos, tipo SPICE, que ayudaban en el diseño a nivel de transistor. Conforme los procesos tecnológicos de fabricación de CI (circuitos integrados) se hacían más complejos, para poder asumir mayores densidades de integración, las técnicas de diseño “manual” de CI se fueron quedando obsoletas. Era prácticamente imposible manejar la complejidad que requerían los nuevos circuitos, en número de transistores y en los bancos de pruebas (<em>test-benches</em>) necesarios para comprobar una correcta funcionalidad.</p>
+
+<p style="text-align: justify;">La consolidación en la década de los noventa de los lenguajes de descripción de hardware (HDLs, <em>Hardware Description Languages</em>) ha supuesto, por otro lado, la implantación progresiva de las denominadas metodologías de diseño ‘<em>Top-Down</em>’ (descendente) que, en contraposición a la metodología ascendente (<em>Bottom-Up</em>), permiten la descripción del sistema al más alto nivel. En el diseño <em>Top-down</em> la dependencia de la implementación final es prácticamente inexistente en las etapas de definición funcional, y se irá concretando en las sucesivas fases de diseño, hasta llegar a la síntesis de sistemas sobre cualquiera de las tecnologías existentes (<em>fulI-custom</em>, ASICs, FPGAs, CPLDs). En este caso, poder concentrar el esfuerzo en la descripción del sistema a nivel funcional y comportamental, valorando la adecuación de distintas arquitecturas, antes de abordar el diseño detallado a nivel físico. Esto es posible porque las herramientas de CAD que soportan los HDLs proporcionan entornos de simulación con distintos niveles de precisión: desde una simulación únicamente funcional, antes de tener sintetizado el circuito sobre ninguna tecnología en concreto, que&#160; permita comprobar el correcto comportamiento de la especificación de circuitos, hasta una simulación temporal, teniendo en cuenta retardos concretos sobre los componentes electrónicos de base y en el rutado de éstos, para una implementación en concreto[7].</p>
+
+<h1 style="text-align: justify;"><strong>3.</strong><strong>Diseño</strong></h1>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">El diseño y validación de una microarquitectura para un driver de motor a pasos unipolar y bipolar empleando un dispositivo del tipo FPGA propuesto en este articulo consta del uso de los siguientes componentes: Tarjeta Nexys 3, ULN2803A y motor paso a paso unipolar y bipolar.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><strong>3.1 </strong><strong>Tarjeta Nexys 3 de Xilinx</strong></p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">El Nexys 3 es una plataforma ideal para el diseño e implementación de circuitos lógicos, controladores, CODEC y procesadores integrados, Fabricada por Xilinx. Esta tarjeta se caracteriza por tener un FPGA <em>Spartan</em> 6 xc6slx16-3csg324 que puede soportar el <em>soft-core MicroBlaze</em>, 48Mbytes de memoria externa (incluidas dos memorias de cambio de fase no volátiles de Micron) y con suficientes dispositivos de entrada y salida para implementar sistemas digitales [10]. Los Nexys 3 es totalmente compatible con todas las herramientas de Xilinx, incluido el WebPACK ™, ChipScope ™, EDK (kit de diseño integrado del procesador) y otras herramientas [8].</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><strong>3.2 </strong><strong>ULN2803A</strong></p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">El dispositivo ULN2803A es un conjunto de transistores Darlington de <strong>50V</strong> y <strong>500 mA</strong>, ver Figura 1. El dispositivo consta de ocho pares NPN Darlington que cuentan con salidas de alto voltaje con diodos de abrazadera de cátodo común para conmutar cargas inductivas. Las aplicaciones incluyen controladores de relé, controladores de martillo, controladores de lámpara, controladores de pantalla (LED y descarga de gas), controladores de línea y búfers lógicos. El dispositivo ULN2803A tiene una resistencia de base de serie de 2,7 kΩ para cada par Darlington para la operación directa con TTL o dispositivos CMOS de 5 V [9]. Para esta aplicación se usará como amplificador para la salida de la FPGA.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><img alt="ULN2803A logic_lrs049.gif" border="0" height="159" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image002.jpg" width="115" /></p>
+
+<p style="text-align: justify;">Figura 1. Dispositivo ULN2803A.</p>
+
+<p style="text-align: justify;"><strong>3.3 </strong><strong>Motor paso a paso </strong></p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">Un motor paso a paso (<em>stepper motor</em>) tiene la propiedad de moverse de un paso a otro por cada pulso de reloj que se le aplique. Así, puede realizar 15 pasos en un mismo sentido si se le aplican 15 pulsos de reloj. Dependiendo de las características del motor, es posible tener pasos muy pequeños (por ejemplo, de 1. 8º, por lo que después de 200 pulsos completará una vuelta a razón de 1. 8º x 200 = 360º) o pasos muy grandes (por ejemplo, de 90º, completando una vuelta con 4 pulsos a razón de 90º x 4 = 360º). [10]. Un motor paso a paso es un motor con alimentación eléctrica que crea rotación de la corriente eléctrica que entra en el motor. Físicamente, los motores paso a paso pueden ser grandes, pero a menudo son lo suficientemente pequeños como para ser impulsados por la corriente del orden de miliamperios. Los impulsos de corriente se aplican al motor, y esto genera una rotación discreta del eje del motor [11].</p>
+
+<p style="text-align: justify;">Los motores pueden ser de dos tipos: bipolar y unipolar. Los motores unipolares cuentan con dos bobinas con un punto medio de los cuales salen los cables hacia el exterior; estos cables se conectan a la fuente mientras que los extremos de las bobinas son aterrizadas para cerrar el circuito; dependiendo del tipo de motor, las líneas comunes pueden ser independientes o no. Esta configuración puede ser vista de las siguientes formas: que el motor tiene dos bobinas pequeñas conectadas a un punto en común, o que una bobina está divida en dos por medio de un punto común. Ahora, y dependiendo de qué media bobina se energice, se puede tener un polo norte o un polo sur; si se energiza la otra mitad, se obtiene un polo opuesto al otro. En la Figura 2 se muestra un esquema representativo del motor a pasos unipolar.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><img border="0" height="181" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg" width="313" /></p>
+
+<p style="text-align: justify;">Figura 2. Esquema representativo del motor a pasos unipolar</p>
+
+<p style="text-align: justify;">Los motores unipolares de 5 cables tienen esta topología debido a que los cables intermedios están unidos en un sólo nodo. Mientras que los motores unipolares de 6 cables tienen un cable de alimentación para cada par de bobinas. A continuación, en la Figura 3 se muestran los dos tipos de configuración del motor a pasos unipolar.</p>
+
+<p style="text-align: justify;"><img border="0" height="131" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg" width="338" /></p>
+
+<p style="text-align: justify;">Figura 3. Topología del motor a pasos unipolar</p>
+
+<p style="text-align: justify;">Para el caso de los motores bipolares, estos cuentan con dos bobinas sin ningún punto medio donde salga un cable, por lo que se tienen cuatro cables y cada par corresponde a las terminales de una bobina. Dada la configuración de la bobina, la corriente puede fluir en dos direcciones, necesitando un control bidireccional o bipolar.&#160;En general, con respecto al sentido de giro de los motores a pasos bipolares, es importante mencionar que el sentido de giro depende de la dirección del flujo de la corriente por las bobinas ya que ésta induce en el embobinado un campo magnético que genera un polo magnético norte y sur, de ahí que el rotor se mueva para que uno de los polos del rotor sea opuesto al de la bobina localizado en el estator, como se muestra en la Figura 4.</p>
+
+<p style="text-align: justify;"><img border="0" height="143" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg" width="301" /></p>
+
+<p style="text-align: justify;">Figura 4. Esquema eléctrico para motor a pasos bipolar</p>
+
+<p style="text-align: justify;">En la Tabla 1, se muestran las comparaciones más significativas entre un motor a pasos unipolar y uno bipolar.</p>
+
+<p style="text-align: justify;">Tabla 1. Comparaciones entre los motores a pasos unipolar y bipolar</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td style="width:170px;height:12px;">
+			<p style="text-align: justify;"><strong>Motores unipolares</strong></p>
+			</td>
+			<td style="width:205px;height:12px;">
+			<p style="text-align: justify;"><strong>Motores bipolares</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:170px;height:13px;">
+			<p style="text-align: justify;">Menor torque</p>
+
+			<p style="text-align: justify;">&#160;</p>
+			</td>
+			<td style="width:205px;height:13px;">
+			<p style="text-align: justify;">Mayor torque</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:170px;height:24px;">
+			<p style="text-align: justify;">Menor anclaje</p>
+
+			<p style="text-align: justify;">&#160;</p>
+			</td>
+			<td style="width:205px;height:24px;">
+			<p style="text-align: justify;">Mayor anclaje debido a los embobinados</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:170px;height:24px;">
+			<p style="text-align: justify;">Tiene un mayor volumen</p>
+
+			<p style="text-align: justify;">&#160;</p>
+			</td>
+			<td style="width:205px;height:24px;">
+			<p style="text-align: justify;">Más pequeño</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:170px;height:24px;">
+			<p style="text-align: justify;">Mayor costo de adquisición</p>
+
+			<p style="text-align: justify;">&#160;</p>
+			</td>
+			<td style="width:205px;height:24px;">
+			<p style="text-align: justify;">Menor costo de adquisición</p>
+
+			<p style="text-align: justify;">&#160;</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:170px;height:25px;">
+			<p style="text-align: justify;">Un control más sencillo al requerir solamente completar un circuito de alimentación</p>
+			</td>
+			<td style="width:205px;height:25px;">
+			<p style="text-align: justify;">Un control más complicado, el cual requiere de una tarjeta que incluya etapas de control de giro y potencia</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">A continuación, se describen las tres secuencias que se implementan en el presente artículo para controlar un motor paso a paso unipolar y bipolar:</p>
+
+<ol style="list-style-type:upper-alpha;">
+	<li style="text-align: justify;"><strong>Paso completo simple:</strong></li>
+</ol>
+
+<p style="text-align: justify;">&#160;Esta secuencia de pasos es la más simple de todas y consiste en activar cada bobina una a una y por separado, con esta secuencia de encendido de bobinas no se obtiene mucha fuerza ya que solo es una bobina cada vez la que arrastra y sujeta el rotor del eje del motor. En la Tabla 2 se muestra la secuencia de pasos.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>
+			<p style="text-align: justify;">No de Pasos</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">A</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">B</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">C</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">D</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:18px;">
+			<p style="text-align: justify;">Paso 1</p>
+			</td>
+			<td style="height:18px;">
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td style="height:18px;">
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td style="height:18px;">
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td style="height:18px;">
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 2</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 3</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 4</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">Tabla 2 Secuencia de paso completo simple.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<ol style="list-style-type:upper-alpha;">
+	<li style="text-align: justify;" value="2"><strong>Paso completo doble. </strong></li>
+</ol>
+
+<p style="text-align: justify;">Con el paso doble se activa las bobinas de dos en dos con lo que el campo magnético es más potente y se atrae con más fuerza al rotor del motor reteniéndolo en el sitio. En la Tabla 3 se muestra la secuencia de pasos.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>
+			<p style="text-align: justify;">No de Pasos</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">A</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">B</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">C</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">D</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 2</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 3</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 4</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">Tabla 3 Secuencia de paso completo doble.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<ol style="list-style-type:upper-alpha;">
+	<li style="text-align: justify;" value="3"><strong>Medio paso.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; </strong></li>
+</ol>
+
+<p style="text-align: justify;">Combinando los dos tipos de secuencias anteriores, se mueve al motor en pasos más pequeños y precisos. Con esto, se tiene el doble de pasos de movimiento para el recorrido total de 360º del motor. En la Tabla 4 se muestra la secuencia de pasos.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<table>
+	<tbody>
+		<tr>
+			<td>
+			<p style="text-align: justify;">No de Pasos</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">A</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">B</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">C</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">D</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 2</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 3</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 4</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 5</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 6</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 7</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p style="text-align: justify;">Paso 8</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">0</p>
+			</td>
+			<td>
+			<p style="text-align: justify;">1</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div style="clear: both; text-align: justify;">&#160;</div>
+
+<p style="text-align: justify;">Tabla 4 Secuencia de medio paso.</p>
+
+<p style="text-align: justify;"><strong>3.4 Diseño del Prototipo</strong></p>
+
+<p style="text-align: justify;">El diseño planteado hace uso de un arreglo de matrices de Darlington para poder generar las diferentes secuencias para el control y giro de los dos tipos de motores a pasos.&#160; Teniendo en cuenta que se ha desarrollado un software para la configuración del hardware de la FPGA, que cumple con las siguientes instrucciones para generar las diferentes configuraciones de los dos tipos de motores a pasos:</p>
+
+<p style="text-align: justify;">if selec ="00" then salida&lt;=s2; leds&lt;=s3;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;--paso simple</p>
+
+<p style="text-align: justify;">elsif selec ="01" then salida&lt;=s5; leds&lt;=s6; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;--paso doble</p>
+
+<p style="text-align: justify;">elsif selec ="10" then salida&lt;=s8; leds&lt;=s9; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- medio paso</p>
+
+<p style="text-align: justify;">else salida&lt;="0000"; leds&lt;="0000";&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;-- apagar o detener</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">además, se plantea el control de giro del motor, esta secuencia se ilustra a continuación.</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; if&#160;&#160;&#160;&#160;&#160; (clk' event AND clk ='0') then</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; cont&lt;=cont+1; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;--Giro Derecha</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; if &#160;&#160;&#160;&#160;(cont=50000000) then</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160; cont&lt;=0;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; --Giro Izquierda</p>
+
+<p style="text-align: justify;">end if;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">La simulación del este programa se hace mediante el uso de la herramienta <strong>Simulate Behavioral Model</strong> suministrada por <strong>ISE Project Navigator, </strong>A continuación, se muestra el código que simula las entradas del sistema.&#160;</p>
+
+<p style="text-align: justify;">-- Stimulus process</p>
+
+<p style="text-align: justify;">&#160;&#160; stim_proc: process</p>
+
+<p style="text-align: justify;">&#160;&#160; begin&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160; -- hold reset state for 100 ns.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; giro&lt;='1';</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Selec&lt;="00";</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; wait for 100 ns;&#160;&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; giro&lt;='1';</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Selec&lt;="01";</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; wait for 100 ns;&#160;&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; giro&lt;='1';</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Selec&lt;="10";</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; wait for 100 ns;&#160;&#160;&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; giro&lt;='1';</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Selec&lt;="11";</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; wait for 100 ns;&#160;</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; giro&lt;='1';</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Selec&lt;="00";</p>
+
+<p style="text-align: justify;">&#160;&#160;&#160;&#160;&#160; wait;</p>
+
+<p style="text-align: justify;">&#160;&#160; end process;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">Los resultados de la simulación de muestran en la Figura 5, estos estaban basados en las diferentes entradas relacionadas con los diferentes modos de operación del motor a pasos. Es decir, para el rango de tiempo entre <strong>0ns</strong> y <strong>100ns</strong> con una entrada <strong>“00”</strong> se realiza la configuración paso simple, para el rango de tiempo entre <strong>100ns</strong> y <strong>200ns</strong> con una entrada <strong>“01”</strong> se realiza la configuración paso doble, para el rango de tiempo entre <strong>200ns</strong> y <strong>300ns</strong> con una entrada <strong>“10”</strong> se realiza la configuración medio paso y con una entrada <strong>“11” </strong>el sistema de detiene.</p>
+
+<p style="text-align: justify;"><img border="0" height="109" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image010.jpg" width="466" /></p>
+
+<p style="text-align: justify;">Figura 5. Simulación para motor a pasos unipolar y bipolar</p>
+
+<p style="text-align: justify;">Realizada la previa programación de la FPGA, se procede con los diseños electrónicos correspondientes a los motores unipolar y bipolar. A continuación, en la Figura 6 y 7 se ilustran los respectivos esquemas electrónicos.</p>
+
+<p style="text-align: justify;"><img border="0" height="222" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image012.jpg" width="480" /></p>
+
+<p style="text-align: justify;">Figura 6. Esquema electrónico motor bipolar.</p>
+
+<p style="text-align: justify;"><img border="0" height="212" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image014.jpg" width="331" /></p>
+
+<p style="text-align: justify;">Figura 7. &#160;Esquema electrónico motor unipolar.</p>
+
+<p style="text-align: justify;">En la Figura anterior se observan los esquemas electrónicos de los prototipos para los dos tipos de motores. Sin embargo, es necesario diseñar el esquema de conexiones para su optimo uso. En la Figura 8 se observa el esquema de conexiones correspondiente al motor unipolar y bipolar.</p>
+
+<p style="text-align: justify;"><img border="0" height="149" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg" width="472" /></p>
+
+<p style="text-align: justify;">Figura 8. Esquema de conexiones.</p>
+
+<p style="text-align: justify;">En el esquema anterior de conexiones es posible observar que la alimentación del motor es suministrada por la FPGA, además que las salidas y entradas lógicas están enlazadas por un único conector.</p>
+
+<h1 style="text-align: justify;"><strong>4.</strong><strong>Validación e implementación</strong></h1>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">Realizado el diseño del prototipo se continua con la construcción de las tarjetas controladoras de los motores a pasos unipolares y bipolares, A continuación, en la Figura 9 y 10 se ilustran respectivamente las tarjetas desarrolladas.</p>
+
+<p style="text-align: justify;"><img border="0" height="176" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image018.jpg" width="273" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <img border="0" height="176" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image020.jpg" width="210" /></p>
+
+<p style="text-align: justify;">Figura 9. Tarjeta desarrollada motor unipolar. &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Figura 10. Tarjeta desarrollada motor bipolar.</p>
+
+<p style="text-align: justify;">Finalmente, para la validación de los prototipos se hace uso de la FPGA previamente programada y se valida que cada una de las instrucciones programadas para que puedan ser generadas por los motores a pasos unipolares y bipolares. A continuación, en la Figura 11 y 12 se ilustran los montajes finales de los prototipos desarrollados.</p>
+
+<p style="text-align: justify;"><img border="0" height="367" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image022.jpg" width="269" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <img border="0" height="365" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image024.jpg" width="283" />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+
+<p style="text-align: justify;">Figura 11. Montaje final motor unipolar&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Figura 12. Montaje final motor bipolar</p>
+
+<p style="text-align: justify;">Se realizan las diferentes pruebas para validar el perfecto funcionamiento tanto del sistema de control, respuesta de la FPGA y los diferentes tipos de secuencia correspondiente al motor a pasos unipolar y bipolar.</p>
+
+<h1 style="text-align: justify;"><strong>5.</strong><strong>Resultados y conclusiones</strong></h1>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">El diseño de la arquitectura, que controla y gestiona la información, se implementó en un FPGA; Spartan 6 xc6slx16-3csg324. Se empleó sólo el 2% de los elementos lógicos, 103 LUT-FF de 230 y IOBs 12 de los 232 equivalente al 5%, del FPGA, como indica el resultado de la simulación y síntesis de la Figura. 13.</p>
+
+<p style="text-align: justify;">Teniendo en cuenta los diseños y las pruebas presentadas en este artículo, se procede a proponer el diseño de un driver capaz de controlar dos tipos de motores, tanto los motores a pasos unipolares como los motores a pasos bipolares. El diseño propuesto está en función de la validación respectiva de cada uno de los drives presentados previamente junto con los tipos de paso o modo de trabajo que puede realizar cada uno de estos motores a pasos. En la Figura 14 se muestra el circuito electrónico propuesto como driver multifuncional para el control de los dos tipos de motores a pasos en un mismo driver de control. Además, el diseño propuesto tiene la capacidad de controlar los dos motores de forma síncrona o mediante el control de un switch es posible deshabilitar uno de ellos.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><img border="0" height="167" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image026.jpg" width="280" /><img border="0" height="265" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image027.jpg" width="229" /></p>
+
+<p style="text-align: justify;">Figura 13. Resultado de la compilación y síntesis.</p>
+
+<p style="text-align: justify;"><img border="0" height="273" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image029.jpg" width="458" /></p>
+
+<p style="text-align: justify;">Figura 14. Circuito electrónico propuesto como driver multifuncional para motores a pasos unipolares y bipolares.</p>
+
+<p style="text-align: justify;">Finalmente se concluye que mediante el uso de dispositivos de lógica programable se ha conseguido implementar el control de los dos tipos de motores a pasos, tanto los unipolares como los bipolares. Se han incluido tres modos de funcionamiento basados en las secuencias de operación del motor, así como el control de giro y la velocidad basada en la frecuencia de operación. Se puede observar el tipo de secuencia mediante el encendido y apagado de los LED indicadores. Además, con base en los resultados obtenidos de la validación de cada uno de los drivers correspondientes a los dos tipos de motores a pasos implementados, fue posible realizar y proponer el diseño de un driver multifuncional capaz de controlar dos motores a pasos en forma simultanea o por separado mediante el accionamiento de un switch.</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+<ol>
+	<li style="text-align: justify;" value="6"><strong>Agradecimientos</strong></li>
+</ol>
+
+<p style="text-align: justify;">Este trabajo ha sido financiado por la Secretaria de Investigación y Posgrado del IPN, con el proyecto de número de registro SIP: 2018300.</p>
+
+<h1 style="text-align: justify;"><strong>Referencias</strong></h1>
+
+<p style="text-align: justify;">&#160;</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[1] Sisterna C. “FIELD PROGRAMMABLE GATE ARRAYS”, (FPGAS), 2002.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[2] Salcic Z y Smailagic A. “Digital Systems Design and Prototyping Using Field Programmable Logic”, ISBN 9781461561255, The University of Auckland, Carnegie Mellon University, Pittsburgh, United States 1997.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[3] Rodriguez J, Sosa J, Garcia V y Ortega R. “Diseño de una microarquitectura para un driver de motor de CD en FPGA”, IEEE ROC&amp;C’2017, vigesimoséptima reunión internacional de otoño de comunicaciones, computación, electrónica, automatización, robótica y exposición industrial, 2017.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[4] Monterrosa N y Bran C. “Diseño e implementación de gobernador de motores basado en PWM y FPGA para aplicarlo en el desarrollo de controlador de vuelo de UAV”, Instituto de Investigación e Innovación electrónica Universidad Don Bosco, El Salvador, C.A, CONESCAPAN XXXIV, 2015.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[5] Eles P, Kuchcinski K, Peng Z y Minea M. “Compiling VHDL into a High-Level Synthesis Design Representation”, Computer Science and Engineering Department Technical University of Timisoara Romania, Dept. of Computer and Information Science Linkoping University Sweden, 0-8186-2780-8/92 IEEE, 1992.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[6] Pardo Carpio, F. “VHDL Lenguaje para descripción y modelado de circuitos”. Universidad de Valencia. 1997.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[7] Basil M, Al-Hadithi, Muro J. “Nuevas tendencias en el diseño electrónico digital: codiseño hardware/software”, Universidad alfonso x el sabio Escuela Politécnica Superior Villanueva de la Cañada (Madrid), Revista de Ciencia. Tecnología y Medio Ambiente VOLUMEN II, 2004.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[8] Digilentinc, disponible en línea en, <a href="http://store.digilentinc.com/nexys-3-spartan-6-fpga-trainer">http://store.digilentinc.com/nexys-3-spartan-6-fpga trainer</a>board-limited-time-see-nexys4-ddr/, Recuperado el 10 de octubre de 2017.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[9] Texas Instruments Incorporated, disponible en línea en http://www.ti.com/product/ULN2803A/datasheet, recuperado el 1 de abril de 2018.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[10] <a name="_Hlk511383347">Prashant K and Mishra R, “Implementation of FPGA based PID Controller for DC Motor Speed Control System”, Associate Professor, Electrical &amp; Electronics Engineering Department SSCET, CSVTU, Bhilai, India, International Journal of Engineering Trends and Technology- Volume4Issue3- 2013</a>.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">[11] Matthew G, “Quick Start for Beginners to Drive a Stepper Motor”. Freescale Semiconductor, Inc., Rev. 1, pp. 1-16, June 2005.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;"><img align="left" height="120" hspace="12" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image031.png" width="91" /><strong>Jhon F. Rodríguez </strong>received the Engineering degree in Electronic Engineering and in Maintenance Engineering in 2016 from UNISANGIL, Colombia. Since 2016, he is a full-time master's student in mechatronics at the Research Center in Applied Science and Advanced Technology (CICATA), National Polytechnic Institute (IPN) in Mexico. His current research interests are computer architecture, signal and image processing, sensor networks, embedded systems, cable driven parallel robots as well as design, modeling and control of systems for rehabilitation.</p>
+
+<p style="text-align: justify;"><img align="left" alt="Foto" height="113" hspace="12" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image033.jpg" width="91" /><strong>Julio C. Sosa </strong>received the Engineering degree in Electronic Engineering in 1997 from ITLAC, Mich. Mexico. The M. Sc. in Electrical Engineering, in 2000 from CINVESTAV-IPN, Mexico and the PhD in Technology of Information, Communication and Computation in 2007 from the University of Valencia, Spain. Currently he is Titular Professor at CICATA-Qro. Instituto Politécnico Nacional, Mexico. His current research interests are signal and image processing, sensor networks and embedded systems.</p>
+
+<p style="text-align: justify;"><img align="left" height="113" hspace="12" src="file:///C:/Users/Tomm/AppData/Local/Temp/msohtmlclip1/01/clip_image035.jpg" width="100" /><strong>José A. Olvera</strong> received the Enginering degree in Electronic Enginering in 2014 from ITQ, Queretaro Mexico. In 2017 he got the master degree on Advanced Technology at the Research Center in Applied Science and Advanced Technology (CICATA), Instituto Politecnico Nacional in México. He is a full time PHD student in CICATA. His current research interests are embedeed systems and control systems.</p>
+
+<p style="margin-left: 14.2pt; text-align: justify;">&#160;</p>
+
+<p style="text-align: justify;">&#160;</p>
+
+
+</body></html>

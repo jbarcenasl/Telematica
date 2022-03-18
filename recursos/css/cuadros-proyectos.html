@@ -1,0 +1,74 @@
+/*-------------------------------------inicio de cuadros------------------------*/
+.efecto-bio img{
+        -webkit-transition:all .6s ease; /* Safari y Chrome */
+        -moz-transition:all .6s ease; /* Firefox */
+        -o-transition:all .6s ease; /* IE 9 */
+        -ms-transition:all .6s ease; /* Opera */
+}
+    .efecto-bio:hover img{
+          -webkit-transform:scale(1.15);
+          -moz-transform:scale(1.15);
+          -ms-transform:scale(1.15);
+          -o-transform:scale(1.15);
+          transform:scale(1.15);
+      }
+#amb{
+   width: 300px; 
+   z-index: 20;    
+} 
+#bio{
+    width: 300px;  
+    z-index: 20;        
+}  
+#eco {
+     width: 300px;  
+     z-index: 20;       
+}
+@media only screen and (min-width: 1000px) {
+#amb{
+	position: relative;
+	left: 130px
+}
+#bio{
+	position: relative;
+	left: 130px
+}
+#eco{
+	position: relative;
+	left: 130px
+}
+}
+@media only screen and (max-width: 999px) and (min-width: 768px){
+	/*body{
+		background-color: green;
+	}*/
+#amb{
+	position: relative;
+	left: 100px
+}
+#bio{
+	position: relative;
+	left: 100px
+}
+#eco{
+	position: relative;
+	left: 100px
+}
+}
+@media only screen and (max-width: 769px){
+	/*body{
+		background-color: pink;
+	}*/
+#amb{
+	position: relative;
+	right: 11px
+}
+#bio{
+	position: relative;
+	right: 11px
+}
+#eco{
+	position: relative;
+	right: 11px
+}
+}

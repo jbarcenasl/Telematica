@@ -1,0 +1,369 @@
+/*
+Reglas para trabajar CSS
+1) Definir estilos para etiquetas HTML Ejemplo Header, fooder, div, a,p, ets.
+2) Definir estilos para identificadores (id) elementos unicos en html, en el css se declaran con el simbolo de # ejemplo #nombre-id {
+estilos } y en el html se llaman mediante el atributo id ejemplo <div id="publicidad"> </div>
+3) estilo para las calses 
+*/
+*{
+	margin:0;
+	padding:0;
+}
+article,figcaption,figure,footer,hader,hroup,nav,section{
+   display:block;
+}
+@font-face{
+	font-family:"Amadeus";
+	src:url("../fonts/Amadeus.eot");
+	src:url("../fonts/Amadeus.eot?#iefix") format(
+	"embedded-opentype"),
+	   	url("../fonts/Amadeus.woff") format("woff"),
+		url("../fonts/Amadeus.ttf") format("truetype"),
+		url("../fonts/Amadeus.svg#Chalet") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}
+@font-face{
+	font-family:"Chalet";
+	src:url("../fonts/Chalet.eot");
+	src:url("../fonts/Chalet.eot?#iefix") format(
+	"embedded-opentype"),
+	   	url("../fonts/Chalet.woff") format("woff"),
+		url("../fonts/Chalet.ttf") format("truetype"),
+		url("../fonts/Chalet.svg#Chalet") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}
+@font-face{
+	font-family:"Pecita";
+	src:url("../fonts/Pecita.eot");
+	src:url("../fonts/Pecita.eot?#iefix") format(
+	"embedded-opentype"),
+	   	url("../fonts/Pecita.woff") format("woff"),
+		url("../fonts/Pecita.ttf") format("truetype"),
+		url("../fonts/Pecita.svg#Chalet") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}
+@font-face{
+	font-family:"Pixie";
+	src:url("../fonts/Pixie.eot");
+	src:url("../fonts/Pixie.eot?#iefix") format(
+	"embedded-opentype"),
+	   	url("../fonts/Pixie.woff") format("woff"),
+		url("../fonts/Pixie.ttf") format("truetype"),
+		url("../fonts/Pixie.svg#Chalet") format("svg");
+		font-weight:normal;
+		font-style:normal;
+}
+body{
+	background:#212121 url(../img/fondo.jpg);
+	color:#4c4a4a;
+	font-size:1.5em;
+	font-family:"Chalet",Verdana, Geneva, sans-serif Arial, Helvetica, sans-serif;
+	}
+a{
+	color: #000478;
+	font-weight:bold;
+	text-decoration: none;
+}
+a:hover{
+	color:#fa840d;
+}
+figcaption{
+	font-size:0.8em;
+	padding: 0.25em;
+	text-align: center;
+}
+
+img, video{
+	max-width: 100%;
+}
+
+/*header, section#contenido, footer{
+	background: #FFF url(../img/fondo-interno.jpg);
+	margin: 0 auto;
+	max-width: 100%;
+	text-align: center;
+}*/
+header h1, nav{
+	display: block;
+	max-width: 100%;
+
+}
+article#texto h3,img{
+
+	vertical-align:middle;
+	display: inline-block;
+
+}
+article#mas{
+	margin:0.5em;
+	
+	border-radius: 0.25em;
+	color: #0ab2f8;
+	display: inline-block;
+   	width:10%
+}
+h3{
+	margin:1.0em;
+    text-shadow:5px 5px 10px rgba(255,255,255,0.5);
+	text-align:center;	
+}
+h4{
+	margin:0.75em;
+}
+article#des{
+	font-family:Verdana, Geneva, sans-serif Arial, Helvetica, sans-serif;
+	margin:0;
+	display:inline-block;
+	width:100%;
+		font-size:0.65em;
+		color:#4c4a4a;
+
+}
+nav ul{
+	list-style: none;
+}
+nav li{
+	font-size:0.6em;
+	
+	
+	display: inline-block;
+		margin: 0px;
+		width: 98%;
+}
+.active{
+	
+	
+	color:#FFF;
+	background:#b72811;
+	/*
+	background: -webkit-linear-gradient(left top , #650d17, #b72811 50px);
+    background: -ms-linear-gradient(left top , #024383, #0066cc 50px);
+	background: -moz-linear-gradient(left top , #024383, #0066cc 50px); */
+	
+}
+.acerca{
+	
+	
+	
+	color:#FFF;
+	background:#635de0;
+
+     	
+}
+.actividades{
+	
+	
+	color:#FFF;
+	background:#1a63fd;
+	 
+	 
+	
+}
+.enlaces{
+	
+
+	color:#FFF;
+	background:#59d4f6;
+
+   
+	
+}
+.contacto{
+	
+	color:#FFF;
+	background:#fe9d04;
+}
+
+.Leermas{
+	font-family:"Chalet",Verdana, Geneva, sans-serif Arial, Helvetica, sans-serif;
+	font-size:1em;
+	border: 0.1em solid #3b414a;
+	color:#FFF;
+background: -webkit-linear-gradient(left top , #0f37bd, #37acf1 80px);
+    background: -ms-linear-gradient(left top , #0f37bd, #37acf1 80px);
+	    background: -moz-linear-gradient(left top , #0f37bd, #37acf1 80px);
+}
+
+nav a{
+	background: #FFF;
+	border: 0.1em groove #FFF;
+	border-radius:0 0.5em 0 0.5em;
+	
+	color: #0ab2f8;
+	display: block;
+	font-family: "Chalet", Helvetica, Verdana;
+	font-size: 1.2em;
+	padding: 0.2em;
+	-ms-transition: all 0.5s ease-in;
+		-moz-transition: all 0.5s ease-in;
+			-o-transition: all 0.5s ease-in;
+				-webkit-transition: all 0.5s ease-in;
+					transition: all 0.5s ease-in;
+}
+nav a:hover {
+	background: #5e5b56;
+	border: 0.1em dashed #FFF;
+	border-radius:0 0.5em 0 0.5em;
+	color:#acf0f8;
+	-ms-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+			-o-transition: all 0.5s ease-out;
+				-webkit-transition: all 0.5s ease-out;
+					transition: all 0.5s ease-out;
+}
+section#principal{
+    
+	 
+	
+	border-radius: 0.5em;
+	display: inline-block;
+	margin:0 auto;
+	max-width: 90%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 95%;
+	
+	
+	
+}
+section#principalWebcast, aside{
+	
+	border-radius: 0.5em;
+	display: inline-block;
+	margin:0 auto;
+	max-width: 100%;
+	padding: 0.25em;
+	vertical-align: top;
+	width: 61%;
+}
+
+article#title1{
+    border: 0.1em groove #FFF;
+	border-radius:0 0 0 0;
+	margin:0.25em;
+}
+.title1{
+	font-family:""Verdana, Geneva, sans-serif;
+	font-size:0.7em;
+	color:#FFF;
+	border:none;
+	margin:0;
+	padding:0.3em;
+    background:#185bf2;
+	color:#FFF;
+	text-shadow:#000 0.1em 0.1em 0.2em;	
+}
+article#ventana {
+	border-radius: 0.5em;
+	margin: 0em;
+	text-align: left;
+	width: 50%;
+}
+aside{
+	width: 30%;
+}
+
+article#galeria-inicio,article#cuadros {
+	display: inline-block;
+	border-radius: 0.5em;
+	margin: 0;
+	text-align: center;
+	width: 100%;
+}
+article#cuadros{
+	border-radius:0;
+	margin:0.85em;
+	background: url(../images/fondo3.png);
+	width:95%;
+}
+article#acerca1 { /** para la seccion de acerca*/
+ 
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:0.55em;
+	margin: 1.25em;
+	text-align: justify;
+	display: inline-block;
+	width: 90%;
+}
+article#webcast { /** para la seccion de acerca*/
+   
+	font-size:1em;
+	display: inline;
+	border-radius: 0.5em;
+	margin: 0.25em;
+	text-align: justify;
+	width: 100%;
+}
+article#img, article#datos-webcast {
+	margin:0;
+	display: block;
+font-family:"Pecita",Verdana, Geneva, sans-serif Arial, Helvetica, sans-serif;
+	
+	border: 0.1em inset #FFF;
+	border-radius:0.5em 0.5em 0 0;
+	color:#FFF;
+	max-height:2.5em;
+	background: url(../img/fondo-internoB.jpg)
+/*background: -webkit-linear-gradient(left top , #0f37bd, #37acf1 910px);
+    background: -ms-linear-gradient(left top , #0f37bd, #37acf1 910px); */
+	
+
+	
+}
+article#datos-webcast{
+	text-align:left;
+	font-size:1em;	
+	border-radius:0 0 0.5em 0.5em;
+}
+article#datos-webcast2{
+	margin:1em;
+	font-size:0.85em;
+}
+article{
+	max-width:100%;
+	display:block;
+}
+
+footer {
+	margin:auto;
+	font-family:Verdana, Geneva, sans-serif;
+	width:63%;
+	background:url(../images/fondo-footer.png);
+	border-radius:0 0 0.5em 0.5em;
+	color:#000;
+	font-size: 0.40em;
+	padding: 0.75em 0;
+}
+img#linea{
+	display:none;
+	}
+.fade{
+-ms-transition: all 0.5s ease-in;
+		-moz-transition: all 0.5s ease-in;
+			-o-transition: all 0.5s ease-in;
+				-webkit-transition: all 0.5s ease-in;
+					transition: all 0.5s ease-int;
+					opacity: 1;
+					filter:alpha(opacity=10);	
+}
+.fade:hover{
+	-ms-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+			-o-transition: all 0.5s ease-out;
+				-webkit-transition: all 0.5s ease-out;
+					transition: all 0.5s ease-out;
+					opacity: 0.7;
+					filter:alpha(opacity=7);
+}
+iframe#ventana-ustream{
+width:33.7em;
+height:22em;
+display:inline-block;
+background:#C03;
+color:#333;
+border:dashed;
+}
+

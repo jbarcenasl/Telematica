@@ -1,0 +1,15 @@
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{margin-top:auto;margin-bottom:auto} .ff0{font-family:sans-serif;visibility:hidden;}
+.sc_{text-shadow:none;}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.sc_{-webkit-text-stroke:0px transparent;}
+}
+.y0{bottom:0.000000px;}
+.h0{height:1400.000000px;}
+.w0{width:1081.818182px;}
+.x0{left:0.000000px;}
+@media print{
+.y0{bottom:0.000000pt;}
+.h0{height:1056.000000pt;}
+.w0{width:816.000000pt;}
+.x0{left:0.000000pt;}
+}
